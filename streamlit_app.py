@@ -159,7 +159,7 @@ if st.sidebar.button("Reset Cache & Counters"):
 # Initialize clients with keys
 if groq_api_key_loaded:
     try:
-        llm_clients["groq"] = ChatGroq(temperature=0.1, model_name="llama3-8b-8192")
+        llm_clients["groq"] = ChatGroq(api_key=groq_api_key_loaded, model_name="llama3-8b-8192")
         groq_available = True
         st.sidebar.success("✓ Groq client initialized (llama3-8b).")
     except Exception as e:
