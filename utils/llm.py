@@ -23,7 +23,7 @@ def initialize_llm_clients():
     # Initialize Groq client if API key available
     if groq_api_key_loaded:
         try:
-            llm_clients["groq"] = ChatGroq(temperature=0.1, model_name="deepseek-r1-distill-llama-70b")
+            llm_clients["groq"] = ChatGroq(temperature=0.1, model_name="openai/gpt-oss-120b")
             groq_available = True
             st.sidebar.success("✓ Groq client initialized (llama3-8b).")
         except Exception as e:
